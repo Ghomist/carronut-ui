@@ -1,0 +1,11 @@
+@use "mixins/all" as *;
+@use "variables/all" as *;
+
+.cr-card {
+  @include set-box-border;
+  @include set-box-sizing;
+  @include set-min-size;
+  @include set-max-content;
+
+  box-shadow: $cr-box-shadow;
+}

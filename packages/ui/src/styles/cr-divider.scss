@@ -1,0 +1,45 @@
+@use "variables/all" as *;
+
+.cr-divider {
+  position: relative;
+
+  &.horizontal {
+    height: 0;
+    border-top: var(--cr-divider-width) solid $cr-color-border;
+    width: var(--cr-divider-length);
+    margin: calc($cr-w-1-line / 2) 0;
+  }
+
+  &.vertical {
+    width: 0;
+    border-left: var(--cr-divider-width) solid $cr-color-border;
+    height: var(--cr-divider-length);
+    margin: 0 calc($cr-w-1-line / 2);
+  }
+
+  &--label {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+
+    vertical-align: middle;
+    white-space: nowrap;
+
+    color: $cr-color-text-primary;
+    background-color: $cr-color-background;
+    padding: 0 $cr-spacing-x;
+
+    &.center {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &.left {
+      left: calc($cr-w-1-char);
+      transform: translate(0, -50%);
+    }
+    &.right {
+      left: calc(var(--cr-divider-length) - $cr-w-1-char);
+      transform: translate(-100%, -50%);
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@use "../variables/all" as *;
+
+$cr-ease-function: ease-out;
+
+@mixin animation($props...) {
+  will-change: $props;
+  transition-property: $props;
+  transition-duration: $cr-animation-duration;
+  transition-timing-function: $cr-ease-function;
+}
+
+@mixin click-effect {
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    pointer-events: none;
+    border-radius: $cr-box-radius;
+
+    inset: 0;
+
+    outline: $cr-animation-offset solid $cr-color-shadow-primary;
+    background-color: transparent;
+    opacity: 0;
+
+    @include animation(opacity, outline-width);
+
+    &:active {
+      opacity: 0.6;
+      outline-width: 0;
+      transition: 0s;
+    }
+  }
+}

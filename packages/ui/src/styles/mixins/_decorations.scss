@@ -1,0 +1,6 @@
+@use "../variables/all" as *;
+
+$cr-box-border: 1px solid $cr-color-primary;
+
+$cr-box-shadow: 0 0 $cr-box-shadow-radius $cr-color-shadow;
+$cr-box-shadow-sm: 0 0 $cr-box-shadow-radius-sm $cr-color-shadow-dark;

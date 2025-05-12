@@ -1,0 +1,20 @@
+{
+  "name": "carronut-ui-examples",
+  "packageManager": "pnpm@10.9.0",
+  "private": true,
+  "version": "0.0.0",
+  "description": "carronut-ui examples",
+  "main": "main.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@vitejs/plugin-vue": "^5.2.3",
+    "@vueuse/core": "^13.1.0",
+    "carronut-ui": "workspace:*",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0",
+    "vue": "^3.5.13"
+  }
+}

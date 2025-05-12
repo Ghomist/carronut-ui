@@ -1,0 +1,13 @@
+@use "mixins/all" as *;
+
+.cr-elastic-box {
+  @include animation(width, height);
+  @include set-max-content;
+
+  overflow: hidden;
+
+  > .cr-elastic-box--content {
+    @include set-max-content;
+    white-space: nowrap;
+  }
+}

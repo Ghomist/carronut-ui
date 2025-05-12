@@ -1,0 +1,25 @@
+// basics
+$cr-w-xs: 0.1rem;
+$cr-w-sm: 0.25rem;
+$cr-w-md: 0.5rem;
+$cr-w-lg: 1rem;
+$cr-w-xl: 2rem;
+
+$cr-w-1-line: 2rem;
+$cr-w-1-char: 1.5rem;
+$cr-w-2-chars: 3.5rem;
+
+// margin & padding
+$cr-spacing-x: $cr-w-md;
+$cr-spacing-y: $cr-w-sm;
+$cr-spacing-x-sm: $cr-w-sm;
+
+// box
+$cr-box-radius: $cr-w-sm;
+$cr-box-shadow-radius: $cr-w-sm;
+$cr-box-shadow-radius-sm: $cr-w-xs;
+
+$cr-box-min-height: $cr-w-1-line;
+$cr-box-min-width: $cr-w-2-chars;
+
+$cr-animation-offset: $cr-w-md;

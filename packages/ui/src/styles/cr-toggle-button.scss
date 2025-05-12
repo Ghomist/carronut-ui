@@ -1,0 +1,27 @@
+@use "variables/all" as *;
+@use "cr-button" as *;
+
+.cr-toggle-button {
+  @extend .cr-button;
+
+  &.active {
+    color: $cr-color-text-invert;
+    background-color: $cr-color-background-invert;
+
+    &:hover {
+      color: $cr-color-text-invert-hover;
+      background-color: $cr-color-background-invert-hover;
+    }
+
+    &:active {
+      color: $cr-color-text-invert-active;
+      background-color: $cr-color-background-invert-active;
+    }
+  }
+
+  &.disabled,
+  &.disabled.active {
+    color: $cr-color-text-invert-disabled;
+    background-color: $cr-color-background-invert-disabled;
+  }
+}

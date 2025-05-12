@@ -1,0 +1,22 @@
+@use "../variables/all" as *;
+@use "decorations" as *;
+
+@mixin set-box-border {
+  border: $cr-box-border;
+  border-radius: $cr-box-radius;
+}
+
+@mixin set-box-sizing {
+  padding: $cr-spacing-y $cr-spacing-x;
+  margin: $cr-spacing-x-sm;
+}
+
+@mixin set-max-content {
+  width: max-content;
+  height: max-content;
+}
+
+@mixin set-min-size {
+  min-width: $cr-box-min-width;
+  min-height: $cr-box-min-height;
+}

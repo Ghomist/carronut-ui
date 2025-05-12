@@ -1,0 +1,57 @@
+@use "sass:color";
+
+// **********************
+// **   basic colors   **
+// **********************
+
+$cr-color-primary: #ff9999; // basic theme color
+$cr-color-foreground: #3e4149; // used for foreground elements (usually texts)
+$cr-color-background: #ffffff; // used for background elements (usually inverted text & backgrounds)
+
+$cr-color-gray: #c4c4c4;
+
+// ***************************
+// **   calculated colors   **
+// ***************************
+
+// $cr-color-gray-light: color.adjust($cr-color-gray, $lightness: 5%);
+// $cr-color-gray-dark: color.adjust($cr-color-gray, $blackness: 5%);
+// $cr-color-gray-disabled: color.change($cr-color-gray, $saturation: 0%, $lightness: 60%);
+
+$cr-color-primary-light: color.adjust($cr-color-primary, $lightness: 5%);
+$cr-color-primary-dark: color.adjust($cr-color-primary, $blackness: 5%);
+$cr-color-primary-disabled: color.change($cr-color-primary, $saturation: 0%, $lightness: 60%);
+// $cr-color-primary-transparent: color.change($cr-color-primary, $alpha: 0.5);
+
+$cr-color-shadow-primary: color.change($cr-color-primary, $saturation: 75%, $alpha: 0.9);
+$cr-color-shadow-primary-light: color.change($cr-color-primary, $saturation: 50%, $alpha: 0.98);
+$cr-color-shadow-primary-dark: color.change($cr-color-primary, $alpha: 0.6);
+
+$cr-color-shadow: color.change($cr-color-gray, $alpha: 0.8);
+$cr-color-shadow-light: color.adjust($cr-color-shadow, $lightness: 15%);
+$cr-color-shadow-lighter: color.adjust($cr-color-shadow, $lightness: 20%);
+$cr-color-shadow-dark: color.adjust($cr-color-shadow, $blackness: 5%);
+
+$cr-color-text-primary: $cr-color-primary;
+$cr-color-text: $cr-color-foreground;
+$cr-color-text-hover: $cr-color-foreground;
+$cr-color-text-active: $cr-color-primary-dark;
+$cr-color-text-disabled: $cr-color-gray;
+$cr-color-text-invert: $cr-color-background;
+$cr-color-text-invert-hover: $cr-color-background;
+$cr-color-text-invert-active: $cr-color-background;
+$cr-color-text-invert-disabled: $cr-color-background;
+
+$cr-color-background: $cr-color-background;
+$cr-color-background-hover: $cr-color-shadow-lighter;
+$cr-color-background-active: $cr-color-shadow-light;
+$cr-color-background-disabled: $cr-color-shadow-light;
+$cr-color-background-invert: $cr-color-primary;
+$cr-color-background-invert-hover: $cr-color-primary-light;
+$cr-color-background-invert-active: $cr-color-primary-dark;
+$cr-color-background-invert-disabled: $cr-color-primary-light;
+
+$cr-color-border: $cr-color-primary;
+$cr-color-border-hover: $cr-color-primary-light;
+$cr-color-border-active: $cr-color-primary-dark;
+$cr-color-border-disabled: $cr-color-primary-light;

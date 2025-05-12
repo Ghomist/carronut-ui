@@ -1,0 +1,15 @@
+@use "../variables/all" as *;
+
+@mixin flex($dir: row, $justify: center, $align: center, $inline: false) {
+  display: if($inline, inline-flex, flex);
+
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+
+  gap: if($dir == row, $cr-spacing-x-sm, $cr-spacing-y);
+
+  @if $inline {
+    vertical-align: $cr-inline-align;
+  }
+}

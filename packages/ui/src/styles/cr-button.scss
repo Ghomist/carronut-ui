@@ -1,0 +1,51 @@
+@use "mixins/all" as *;
+@use "variables/all" as *;
+
+.cr-button {
+  @include set-box-border;
+  @include set-box-sizing;
+  @include set-max-content;
+  @include set-min-size;
+
+  @include animation(background-color, color, box-shadow, transform, max-width);
+  @include click-effect;
+
+  @include flex($inline: true);
+
+  color: $cr-color-text;
+  background-color: $cr-color-background;
+  border-color: $cr-color-border;
+  box-shadow: $cr-box-shadow;
+
+  cursor: pointer;
+
+  &.stacked {
+    flex-direction: column;
+  }
+
+  &:hover {
+    color: $cr-color-text-hover;
+    background-color: $cr-color-background-hover;
+    border-color: $cr-color-border-hover;
+    box-shadow: $cr-box-shadow-sm;
+  }
+
+  &:active {
+    background-color: $cr-color-background-active;
+    border-color: $cr-color-border-active;
+    box-shadow: none;
+
+    transform: scale(0.99);
+  }
+
+  &.disabled {
+    color: $cr-color-text-disabled;
+    background-color: $cr-color-background-disabled;
+    border-color: $cr-color-border-disabled;
+    box-shadow: none;
+
+    transform: none;
+
+    cursor: not-allowed;
+  }
+}
