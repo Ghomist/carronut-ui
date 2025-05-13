@@ -17,7 +17,7 @@ npm install carronut-ui
 
 Simply import components and styles in your project. Or use resolvers for auto import. (See [Auto Import](#auto-import))
 
-```tsx
+```vue
 <script setup lang="ts">
 import "carronut-ui/styles/cr-button.css";
 import { CrButton } from "carronut-ui";
@@ -51,18 +51,18 @@ export default defineConfig({
 
 And use component in your project:
 
-```tsx
-// Manual import components in <script>
-import { CrButton } from "carronut-ui";
+```vue
+<script setup>
+import { CrButton } from "carronut-ui"; // Manual import components
+</script>
 
-// Use it in template
 <template>
   <CrButton> Carronut! </CrButton>
 </template>;
 ```
 
 > [!TIP]
-> Most of the time, you don't need to import the component manually. Just type `CrButton` in `<template>` section and wait for **autocompletion**. The IDE / vue extension will automatically insert the import statements when you **accept it**.
+> Most of the time, you don't need to import the component manually. Just type `<CrButton>` (or any component in Carronut) inside the `<template>` section and wait for **autocompletion**. The IDE / vue extension will automatically insert the import statements when you **accept it**.
 
 ### Auto Import Components and Styles
 
@@ -99,7 +99,7 @@ export default defineConfig({
 
 Don't forget to include the type definition in `tsconfig.json` (or `tsconfig.app.json`).
 
-```json
+```js
 {
   "include": [
     "components.d.ts" // Add your components dts file here
@@ -111,7 +111,7 @@ Don't forget to include the type definition in `tsconfig.json` (or `tsconfig.app
 
 Use the components directly. No import needed.
 
-```html
+```vue
 <template>
   <CrButton> Carronut! </CrButton>
 </template>
@@ -119,18 +119,20 @@ Use the components directly. No import needed.
 
 ## Themes
 
-> [!WARNING] TBD
-> Override Colors and Variables
+> [!WARNING]
+> TBD: Override Colors and Variables
 
 ## Icons
 
-> [!WARNING] TBD
+> [!WARNING]
+> TBD
 
 Based on [Iconify](https://iconify.design/), recommend icon set: [Mingcute](https://github.com/Richard9394/MingCute)
 
 ## I18n
 
-> [!WARNING] TBD
+> [!WARNING]
+> TBD
 
 ## Development
 
