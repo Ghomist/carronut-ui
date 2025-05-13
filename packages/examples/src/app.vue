@@ -1,12 +1,11 @@
 <script setup lang="ts">
-// import { CrDivider, CrIcon, CrToggleButton, CrCard, CrElasticBox } from "carronut-ui";
-import { CrDivider } from "carronut-ui";
 import { computed, onUnmounted, ref } from "vue";
 
 const bool = ref(true);
 const counter = ref(0);
 const boolText = computed(() => (bool.value ? "开" : "关"));
 const randomText = ref("");
+const inputText = ref("");
 
 const itv = setInterval(() => {
   if (randomText.value.length > 10) randomText.value = "";
@@ -24,7 +23,7 @@ onUnmounted(() => {
 <template>
   <header>Carronut UI Examples</header>
 
-  <main>
+  <main class="cr-config-wrapper">
     <CrDivider label="图标" />
 
     <CrIcon name="mingcute:vue-fill"></CrIcon>
@@ -50,5 +49,8 @@ onUnmounted(() => {
     <CrCard>
       <CrElasticBox>{{ randomText }}</CrElasticBox>
     </CrCard>
+
+    <CrDivider label="输入框" />
+    <CrInput v-model="inputText" placeholder="输入点什么吧！" />
   </main>
 </template>

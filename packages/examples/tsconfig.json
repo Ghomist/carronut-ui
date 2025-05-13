@@ -2,7 +2,6 @@
   "include": ["*.d.ts", "src/**/*.ts", "src/**/*.d.ts"],
   "exclude": ["node_modules", "dist"],
   "compilerOptions": {
-    "lib": ["ESNext", "DOM"],
-    "types": ["carronut-ui"]
+    "lib": ["ESNext", "DOM"]
   }
 }

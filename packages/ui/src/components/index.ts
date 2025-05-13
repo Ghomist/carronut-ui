@@ -7,4 +7,5 @@ export { default as CrCard } from "./containers/cr-card.vue";
 export { default as CrDivider } from "./divider/cr-divider.vue";
 export { default as CrElasticBox } from "./elastic-box/cr-elastic-box.vue";
 export { default as CrIcon } from "./icons/cr-icon.vue";
+export { default as CrInput } from "./input/cr-input.vue";
 export { default as CrNavigationMenu } from "./navigation/cr-navigation-menu.vue";

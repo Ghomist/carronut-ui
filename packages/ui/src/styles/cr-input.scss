@@ -1,27 +1,18 @@
 @use "mixins/all" as *;
 @use "variables/all" as *;
 
-.cr-button {
+.cr-input {
   @include set-box-border;
   @include set-box-sizing;
-  @include set-max-content;
+  @include set-min-content;
   @include set-min-size;
 
   @include animation(background-color, color, box-shadow, transform);
-  @include click-effect;
-
-  @include flex($inline: true);
 
   color: $cr-color-text;
   background-color: $cr-color-background;
   border-color: $cr-color-border;
   box-shadow: $cr-box-shadow;
-
-  cursor: pointer;
-
-  &.stacked {
-    flex-direction: column;
-  }
 
   &:hover {
     color: $cr-color-text-hover;
@@ -38,14 +29,7 @@
     transform: scale(0.995);
   }
 
-  &:disabled {
-    color: $cr-color-text-disabled;
-    background-color: $cr-color-background-disabled;
-    border-color: $cr-color-border-disabled;
-    box-shadow: none;
-
-    transform: none;
-
-    cursor: not-allowed;
+  &:focus-visible {
+    outline: 1px solid $cr-color-border-active;
   }
 }

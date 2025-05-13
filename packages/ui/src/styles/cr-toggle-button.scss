@@ -19,8 +19,8 @@
     }
   }
 
-  &.disabled,
-  &.disabled.active {
+  &:disabled,
+  &:disabled.active {
     color: $cr-color-text-invert-disabled;
     background-color: $cr-color-background-invert-disabled;
   }

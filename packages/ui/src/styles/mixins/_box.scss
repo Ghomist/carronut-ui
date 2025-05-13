@@ -16,6 +16,11 @@
   height: max-content;
 }
 
+@mixin set-min-content {
+  width: min-content;
+  height: min-content;
+}
+
 @mixin set-min-size {
   min-width: $cr-box-min-width;
   min-height: $cr-box-min-height;
