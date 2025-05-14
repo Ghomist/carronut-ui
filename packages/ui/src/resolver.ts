@@ -104,6 +104,7 @@ export const CarronutUIStyleImporter = (): PluginOption => {
             const styleName = camelToKebab(comp);
             // Avoid duplicate imports
             if (styles.has(styleName)) continue;
+            styles.add(styleName);
             styleImports.push(`import "${packageName}/styles/${styleName}.scss";`);
           }
         }
