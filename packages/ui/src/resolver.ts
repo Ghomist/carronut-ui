@@ -49,7 +49,7 @@ export const CarronutUIResolver = (): ComponentResolver => {
 };
 
 /**
- * Auto import Carronut component styles
+ * Auto import Carronut component styles.
  *
  * This plugin will automatically import the styles of the components that are
  * imported from the package. This should be used only if your project is using
@@ -72,6 +72,17 @@ export const CarronutUIStyleImporter = (): PluginOption => {
   return {
     name: `${packageName}-style-importer`,
     transform(code) {
+      // Detect style imports
+      const styleImportRegex = new RegExp(
+        `import\\s+["']${packageName}/styles/([^"']+)\\.scss["'];?`,
+        "g"
+      );
+      const styles = new Set<string>();
+      const styleMatches = code.matchAll(styleImportRegex);
+      for (const match of styleMatches) {
+        styles.add(match[1]);
+      }
+
       // Detect imports from the package
       const importRegex = new RegExp(
         `import\\s+\\{([^}]+)\\}\\s+from\\s+["']${packageName}["'];?`,
@@ -86,25 +97,27 @@ export const CarronutUIStyleImporter = (): PluginOption => {
         // Use the very first import as the insertion point
         if (match.index < insertionPoint) insertionPoint = match.index;
 
-        // match all imports
+        // Match all imports
         const components = match[1].split(",").map(c => c.trim());
         for (const comp of components) {
           if (comp.startsWith("Cr")) {
             const styleName = camelToKebab(comp);
+            // Avoid duplicate imports
+            if (styles.has(styleName)) continue;
             styleImports.push(`import "${packageName}/styles/${styleName}.scss";`);
           }
         }
       }
 
-      if (styleImports.length) {
-        code =
+      if (!styleImports.length) return;
+
+      return {
+        code:
           code.slice(0, insertionPoint) +
           styleImports.join("\n") +
           "\n" +
-          code.slice(insertionPoint);
-      }
-
-      return { code };
+          code.slice(insertionPoint)
+      };
     }
   };
 };
