@@ -8,7 +8,7 @@ on:
   # using the `master` branch as the default branch.
   push:
     branches: [master]
-    paths: 'packages/docs/**'
+    paths: "packages/docs/**"
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,10 +34,9 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0 # Not needed if lastUpdated is not enabled
-      # - uses: pnpm/action-setup@v3 # Uncomment this block if you're using pnpm
-      #   with:
-      #     version: 9 # Not needed if you've set "packageManager" in package.json
-      # - uses: oven-sh/setup-bun@v1 # Uncomment this if you're using Bun
+      - uses: pnpm/action-setup@v3
+        # with:
+        #   version: 9 # Not needed if you've set "packageManager" in package.json
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
