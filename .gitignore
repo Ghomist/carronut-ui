@@ -30,6 +30,10 @@ coverage
 
 *.tsbuildinfo
 
-# Unplugin things
+# Generated files
 auto-imports.d.ts
 components.d.ts
+
+# Vitepress
+packages/docs/.vitepress/dist
+packages/docs/.vitepress/cache

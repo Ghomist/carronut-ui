@@ -1,0 +1,16 @@
+{
+  "name": "docs",
+  "version": "0.0.0",
+  "scripts": {
+    "docs:dev": "vitepress dev",
+    "docs:build": "vitepress build",
+    "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "vitepress-plugin-group-icons": "^1.5.4"
+  },
+  "devDependencies": {
+    "carronut-ui": "workspace:*",
+    "vitepress": "^1.6.3"
+  }
+}

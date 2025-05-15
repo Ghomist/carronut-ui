@@ -1,4 +1,4 @@
-# Contribute to Carronut UI
+# Development Guide
 
 Recommend using VSCode + pnpm.
 
@@ -7,6 +7,7 @@ Recommend using VSCode + pnpm.
 ```text
 .
 ├── packages
+│   ├── docs        // Documentation
 │   ├── ui          // Carronut UI Library
 │   └── examples    // Examples and Development Playground
 └── package.json
@@ -50,19 +51,20 @@ A component must have the following structure:
    4. `__tests__/cr-<component-name>.spec.ts`: The unit tests of the component.
 2. `src/styles/cr-<component-name>.scss`: The styles of the component.
 
-Please refer to the implementation of [buttons](./packages/ui/src/components/buttons) for details.
+Please refer to the implementation of [buttons](https://github.com/Ghomist/carronut-ui/tree/master/packages/ui/src/components/buttons) for details.
 
 Notices:
 
-- Only components named with `cr-` prefix will be auto-exported (see [generate-exports.js](packages/ui/scripts/generate-exports.js#L21)).
+- Only components named with `cr-` prefix will be auto-exported (see [generate-exports.js](https://github.com/Ghomist/carronut-ui/blob/master/packages/ui/scripts/generate-exports.js#L22)).
 - The style file name must be the same as the component file name, and be placed in `src/styles` folder.
-- Every exported component must have a style file even if it is empty. This is for avoiding breaking our [resolvers](packages/ui/src/resolver.ts).
+- Every exported component must have a style file even if it is empty. This is for avoiding breaking our [resolvers](https://github.com/Ghomist/carronut-ui/blob/master/packages/ui/src/resolver.ts).
 
 ## Git
 
 Commit message format:
 
 ```text
+<type>: <subject>
 <type>(<scope>): <subject>
 ```
 
