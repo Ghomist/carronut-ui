@@ -5,6 +5,7 @@ import { zhConfig } from "./zh";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: "/carronut-ui/",
   locales: {
     zh: {
       label: "简体中文",

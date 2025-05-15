@@ -2,13 +2,13 @@
 
 <script setup>
 import { onMounted } from 'vue'
-import { useRouter } from 'vitepress'
+import { useRouter, withBase } from 'vitepress'
 
 const router = useRouter()
 
 onMounted(() => {
   const lang = navigator.language.toLowerCase()
   const path = lang.startsWith('zh') ? '/zh/' : '/en/'
-  router.go(path)
+  router.go(withBase(path))
 })
 </script>
