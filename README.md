@@ -4,4 +4,4 @@ A Vue 3 UI Component Library.
 
 ## Docs
 
-Read our docs here: <https://carronut.github.io/ >
+Read our docs here: <https://ghomist.github.io/carronut-ui>
