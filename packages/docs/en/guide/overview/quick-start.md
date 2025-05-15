@@ -164,7 +164,7 @@ Use components directly without any import statements:
 
 ## Explore Components
 
-Visit [Component Overview](/en/components/overview) to learn about all components provided by Carronut UI.
+Visit [Component Overview](../../components/overview/all-components) to learn about all components provided by Carronut UI.
 
 ## View Examples
 

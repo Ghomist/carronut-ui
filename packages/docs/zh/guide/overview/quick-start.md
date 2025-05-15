@@ -164,7 +164,7 @@ export default defineConfig({
 
 ## 浏览组件
 
-可以前往 [组件总览](/zh/components/overview) 了解 Carronut UI 提供的所有组件。
+可以前往 [组件总览](../../components/overview/all-components) 了解 Carronut UI 提供的所有组件。
 
 ## 查看示例
 
